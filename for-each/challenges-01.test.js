@@ -32,7 +32,9 @@ Then, write a function named addNumbers that takes in four arguments:
   - The number of times the number should be added
   - A callback function to use to add the numbers to the array (Hint: you already defined it)
 
-Within the addNumbers function, invoke the callback function as many times as necessary, based on the third argument of the addNumbers function.
+Within the addNumbers function, 
+invoke the callback function as many times as necessary, 
+based on the third argument of the addNumbers function.
 
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
@@ -42,7 +44,10 @@ const addValues = (arr, value) => {
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+    for (let i = 0; i < times; i++) {
+        callback(arr, num);
+    }
+    return arr; 
 };
 
 /* ------------------------------------------------------------------------------------------------

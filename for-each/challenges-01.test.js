@@ -57,17 +57,24 @@ Write a function named removeOne that takes in a number and an array. If the num
 
 Hint: you may want to look into the modulo operation.
 
-Then, write a function named removeElements that takes in an array and a callback. This function should use a for loop to iterate over the array and invoke the callback once for each element in the array.
+Then, write a function named removeElements that takes in an array and a callback.
+ This function should use a for loop to iterate over the array and invoke the 
+ callback once for each element in the array.
 
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const removeOne = (num, arr) => {
-  // Solution code here...
+    if (num % 3 === 2) {
+        arr.pop();
+    }
 };
 
 const removeElements = (arr, callback) => {
-  // Solution code here...
+        for (let i = 0; i < arr.length; i++) {
+            callback(arr[i], arr);
+        }
+        return arr; 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -77,6 +84,10 @@ Write a function named removeWithForEach that produces the same output as challe
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithForEach = (arr, callback) => {
+    arr.forEach((num) => {
+        callback(num, arr);
+    });
+return arr; 
   // Solution code here...
 };
 

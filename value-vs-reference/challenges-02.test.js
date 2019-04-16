@@ -54,13 +54,15 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
 const addBirthYearProperty = (obj, year) => {
-    obj.yearBorn = "1960";
+    obj.yearBorn = year;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function that accepts an array of people objects and adds a new property called isAuthor to each object in the list. Set the value of the new property to true.
+Write a function that accepts an array of people objects 
+and adds a new property called isAuthor to each object in the list. 
+Set the value of the new property to true.
 
 The function should modify the object in place. Do not use a return statement.
 
@@ -71,13 +73,14 @@ console.log(people[1].isAuthor) prints true
 ------------------------------------------------------------------------------------------------ */
 
 const setStatusAsAuthor = (people) => {
-  // Solution code here...
+   people.forEach(function(element) {element.isAuthor = true;});
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function that accepts two arrays. Append the values from the second array into the first,
+Write a function that accepts two arrays. 
+Append the values from the second array into the first,
 maintaining the ordering.
 
 The function should modify the first array in place. Do not use a return statement.

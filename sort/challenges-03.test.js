@@ -7,7 +7,8 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  // Solution code here...
+  arr.sort(function(a, b){return b-a});
+return arr; 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -21,7 +22,8 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  // Solution code here...
+  arr.sort();
+  return arr; 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -31,7 +33,10 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 const sortByLength = (arr) => {
-  // Solution code here...
+  arr.sort(function(a, b){
+    return a.length - b.length;
+  });
+  return arr; 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,7 +48,10 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-  // Solution code here...
+  arr.sort(function(a,b) {
+    return a.toLowerCase() > b.toLowerCase() ? 1 : -1
+  }); 
+  return arr; 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,7 +68,11 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  // Solution code here...
+  arr.sort(function(a, b){
+    return a.price - b.price;
+  });
+  return arr; 
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -71,14 +83,19 @@ Write a function named sortNumbersByLength that takes in an array of numbers and
 For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
-const sortNumbersByLength = (arr) => {
-  // Solution code here...
+const sortNumbersByLength = (arr) => {  
+  arr.sort(function(a, b){
+    return a.toString().length - b.toString().length;
+  });
+  return arr; 
 };
 
 /*-----------------------------------------------------------------------------------------------
 CHALLENGE 7
 
-Write a function named sortPeople that takes in an array of Person objects, each of which has firstName, lastName, and age properties, and sorts those people by their last names. Do not worry about capitalization or first names.
+Write a function named sortPeople that takes in an array of Person objects,
+ each of which has firstName, lastName, and age properties, 
+ and sorts those people by their last names. Do not worry about capitalization or first names.
 ------------------------------------------------------------------------------------------------ */
 
 function Person(firstName, lastName, age) {
@@ -94,13 +111,17 @@ const people = [
 ];
 
 const sortPeople = (arr) => {
-  // Solution code here...
+  arr.sort(function(a, b) {
+    return a.lastName.toLowerCase() > b.lastName.toLowerCase() ? 1 : -1;
+  });
+  return arr; 
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8
 
-Write a function named sortPeopleBetter that takes in an array of Person objects, each of which has firstName, lastName, and age properties, and sorts those people by their last names.
+Write a function named sortPeopleBetter that takes in an array of Person objects, 
+each of which has firstName, lastName, and age properties, and sorts those people by their last names.
 
 If two people share the same last name, alphabetize on their first name.
 
@@ -108,8 +129,20 @@ If two people have the same full name, the younger one should come first. Do not
 ------------------------------------------------------------------------------------------------ */
 
 const sortPeopleBetter = (arr) => {
-  // Solution code here...
+  arr.sort(function(a, b) {
+    if (a.lastName === b.lastName && a.firstName === b.firstName) {
+      return a.age > b.age ? 1 : -1;
+    }
+    else if (a.lastName === b.lastName) {
+      return a.firstName > b.firstName ? 1 : -1;
+    }
+    else {
+      return a.lastName > b.lastName ? 1 : -1;
+    }
+  });
+  return arr; 
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal

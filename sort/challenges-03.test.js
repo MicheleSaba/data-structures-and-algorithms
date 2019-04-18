@@ -188,7 +188,18 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
 
 const sortSchedule = (arr) => {
-  // Solution code here...
+  function subtract(a,b) {
+    return a - b; 
+  };
+  arr.sort(function (a, b) {
+    if(a.dayOfWeek === b.dayOfWeek && a.start === b.start) {
+      return a.dayOfWeek < b.dayOfWeek ? 1 : -1;
+    }
+    // else {
+    //   return a.start < b.start ? 1 : -1;
+    // }
+  });
+  return arr; 
 };
 
 /* ------------------------------------------------------------------------------------------------

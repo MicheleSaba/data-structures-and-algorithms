@@ -14,4 +14,4 @@ This program with run a loop for half the size of the array.
 
 ## Solution
 
-<img src="./assets/reverseArray.jpeg" />
+![alt text](https://raw.githubusercontent.com/michelesaba/data-structures-and-algorithms/assets/reverseArray.jpeg)

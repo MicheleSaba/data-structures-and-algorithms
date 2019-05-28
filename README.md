@@ -15,3 +15,15 @@ This program with run a loop for half the size of the array.
 ## Solution
 
 ![Array Reverse Solution](https://github.com/MicheleSaba/data-structures-and-algorithms/blob/master/assets/reverseArray.jpeg)
+
+# Linked-Lists Insertion
+
+## Challenge
+
+Insert nodes into linked lists, before & after value and append.
+
+## Approach & Efficiency
+
+We decided to use a while loop on all three approaches. To append, we iterated through the array until we found the last value and then inserted the new value at the last iteration. 
+
+## Solution

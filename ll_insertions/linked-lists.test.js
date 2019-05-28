@@ -1,4 +1,4 @@
-let List = require("./linked-list");
+let List = require("./linked-lists-insert");
 ///TEST//
 describe("linked list", () => {
   it("Can successfully instantiate an empty linked list", () => {

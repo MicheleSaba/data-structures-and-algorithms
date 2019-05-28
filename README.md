@@ -27,3 +27,5 @@ Insert nodes into linked lists, before & after value and append.
 We decided to use a while loop on all three approaches. To append, we iterated through the array until we found the last value and then inserted the new value at the last iteration. 
 
 ## Solution
+
+![LL-Insertion](https://github.com/MicheleSaba/data-structures-and-algorithms/blob/master/assets/ll-insertion.jpeg)

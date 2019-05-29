@@ -90,13 +90,47 @@ describe("linked list", () => {
     expect(mylist.print()).toEqual([1, 2, 12, 9, 7]);
     console.log("line 82", mylist);
   });
-  it('Can insert after value', () => {
+  it("Can insert after value", () => {
     // Arrange
     let mylist = new List();
     mylist.insert(2);
     mylist.insert(9);
     mylist.insertAfter(2, 12);
-    expect(mylist.print()).toEqual([2,12,9]);
-    console.log('line 82', mylist)
+    expect(mylist.print()).toEqual([2, 12, 9]);
+    console.log("line 82", mylist);
+  });
+  it("Can insert at k before end", () => {
+    // Arrange
+    let mylist = new List();
+    mylist.insert(1);
+    mylist.insert(2);
+    mylist.insert(3);
+    mylist.insert(4);
+    mylist.insert(5);
+    mylist.insertAtK(2, 27);
+    expect(mylist.print()).toEqual([1, 2, 3, 27, 4, 5]);
+    console.log("line 82", mylist);
+  });
+  it("returns original list if number is greater than list length", () => {
+    let mylist = new List();
+    mylist.insert(1);
+    mylist.insert(2);
+    mylist.insert(3);
+    mylist.insert(4);
+    mylist.insert(5);
+    mylist.insertAtK(8, 27);
+    expect(mylist.print()).toEqual([1, 2, 3, 4, 5]);
+    console.log("line 82", mylist);
+  });
+  it("returns list if number is negative", () => {
+    let mylist = new List();
+    mylist.insert(1);
+    mylist.insert(2);
+    mylist.insert(3);
+    mylist.insert(4);
+    mylist.insert(5);
+    mylist.insertAtK(-8, 27);
+    expect(mylist.print()).toEqual([1, 2, 3, 4, 5]);
+    console.log("line 82", mylist);
   });
 });

@@ -29,3 +29,17 @@ We decided to use a while loop on all three approaches. To append, we iterated t
 ## Solution
 
 ![LL-Insertion](https://github.com/MicheleSaba/data-structures-and-algorithms/blob/master/assets/ll-insertion.jpeg)
+
+# Linked-Lists Insert at k before the end of list. 
+
+## Challenge
+
+Given a number(k), return the nodes value that is k from the end of the list. 
+
+## Approach & Efficiency
+
+Use a for loop that iterates list.length -k, then insert the new node and assign the new next value to the next node.  
+
+## Solution
+
+![LL-Insertion](https://github.com/MicheleSaba/data-structures-and-algorithms/blob/master/assets/insertAtK.jpeg)

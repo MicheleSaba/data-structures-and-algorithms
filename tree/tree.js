@@ -22,30 +22,31 @@ class BinaryTree {
   }
 
   inOrder() {
-//     let result = [];
-//     if (!node.left && !node.right) {
-//       // falsy check incl undefined/null
-//       console.log("leaf: " + node.value);
-//       result.push(node.value);
-//       return; // omit else parts
-//     } // with early returns
-//     if (!node.right) {
-//       console.log("right is null, val: " + node.value);
-//       inOrder(node.left);
-//       resultr.push(node.value);
-//       return;
-//     }
-//     if (!node.left) {
-//       console.log("left is null, val:" + node.value);
-//       result.push(node.value);
-//       inOrder(node.right);
-//       return;
-//     }
-//     console.log("no nulls:");
-//     inOrder(node.left);
-//     result.push(node.value);
-//     inOrder(node.right);
-//   }
+    //     let result = [];
+    //     if (!node.left && !node.right) {
+    //       // falsy check incl undefined/null
+    //       console.log("leaf: " + node.value);
+    //       result.push(node.value);
+    //       return; // omit else parts
+    //     } // with early returns
+    //     if (!node.right) {
+    //       console.log("right is null, val: " + node.value);
+    //       inOrder(node.left);
+    //       resultr.push(node.value);
+    //       return;
+    //     }
+    //     if (!node.left) {
+    //       console.log("left is null, val:" + node.value);
+    //       result.push(node.value);
+    //       inOrder(node.right);
+    //       return;
+    //     }
+    //     console.log("no nulls:");
+    //     inOrder(node.left);
+    //     result.push(node.value);
+    //     inOrder(node.right);
+    //   }
+  }
   postOrder() {}
 }
 

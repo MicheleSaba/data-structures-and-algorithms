@@ -7,10 +7,6 @@ describe("binary tree", () => {
     var tree = testTree();
     expect(tree.preOrder()).toEqual(["A", "B", "D", "E", "C", "F"]);
   });
-  it("can traverse inorder", () => {
-    var tree2 = testTree();
-    expect(tree2.inOrder()).toEqual([]);
-  });
 });
 
 function testTree() {

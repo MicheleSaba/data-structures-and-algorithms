@@ -4,7 +4,6 @@ class BinaryTree {
   constructor() {
     this.root = null;
   }
-
   preOrder() {
     var result = [];
     preOrderVisit(this.root);
@@ -16,7 +15,6 @@ class BinaryTree {
       preOrderVisit(node.right);
     }
   }
-
   inOrder() {
     var result = [];
     inOrderVisit(this.root);
@@ -39,6 +37,23 @@ class BinaryTree {
       result.push(node.value);
     }
   }
+  findMax() {
+    let max;
+    max = 0;
+    preOrderVisit(this.root);
+    if (this.root.value > max) {
+      max = this.root.value;
+    }
+    return max;
+    function preOrderVisit(node) {
+      if (!node) return;
+      if (node.value > max) {
+        max = node.value;
+      }
+      preOrderVisit(node.left);
+      preOrderVisit(node.right);
+    }
+  }
 }
 
 class Node {
@@ -49,6 +64,4 @@ class Node {
 }
 
 module.exports = BinaryTree;
-
-// Export Node constructor as property of BinaryTree constructor
 BinaryTree.Node = Node;
